@@ -9,6 +9,7 @@ namespace UserRegistrationUsingNUnitTest
         Regex lastNameregex = new Regex("^[A-Z][a-zA-Z]{2,}$");
         Regex emailregex = new Regex("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}(.[][a-zA-Z]{2})*$");
         Regex mobileNumberregex = new Regex(@"^[0-9]{2,}\s[0-9]{10,}$");
+        Regex PasswordRule1regex = new Regex(@"^.{8,}$");
         public bool FirstNameRegex(string firstname)
         {
             return (firstNameregex.IsMatch(firstname)); 
@@ -25,6 +26,10 @@ namespace UserRegistrationUsingNUnitTest
         public bool MobileNumberRegex(string mobileNumber)
         {
             return (mobileNumberregex.IsMatch(mobileNumber));
+        }
+        public bool PasswordRule1Regex(string mobileNumber)
+        {
+            return (PasswordRule1regex.IsMatch(mobileNumber));
         }
         static void Main(string[] args)
         {
