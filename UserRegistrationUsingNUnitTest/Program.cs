@@ -12,6 +12,7 @@ namespace UserRegistrationUsingNUnitTest
         Regex passwordRule1regex = new Regex(@"^.{8,}$");
         Regex passwordRule2regex = new Regex(@"^(?=.*[A-Z]).{8,}$");
         Regex passwordRule3regex = new Regex(@"^(?=.*[A-Z])(?=.*\d).{8,}$");
+        Regex passwordRule4regex = new Regex(@"^(?=.{8,}$)(?=[^A-Z]*[A-Z][^A-Z]*$)\w*\W\w*$");
         public bool FirstNameRegex(string firstname)
         {
             return (firstNameregex.IsMatch(firstname)); 
@@ -40,6 +41,10 @@ namespace UserRegistrationUsingNUnitTest
         public bool PasswordRule3Regex(string passwordRule3)
         {
             return (passwordRule3regex.IsMatch(passwordRule3));
+        }
+        public bool PasswordRule4Regex(string passwordRule4)
+        {
+            return (passwordRule4regex.IsMatch(passwordRule4));
         }
         static void Main(string[] args)
         {
