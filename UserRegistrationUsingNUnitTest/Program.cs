@@ -7,6 +7,7 @@ namespace UserRegistrationUsingNUnitTest
     {
         Regex firstNameregex = new Regex("^[A-Z][a-zA-Z]{2,}$");
         Regex lastNameregex = new Regex("^[A-Z][a-zA-Z]{2,}$");
+        Regex emailregex = new Regex("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}(.[][a-zA-Z]{2})*$");
         public bool FirstNameRegex(string firstname)
         {
             return (firstNameregex.IsMatch(firstname)); 
@@ -15,6 +16,10 @@ namespace UserRegistrationUsingNUnitTest
         public bool LastNameRegex(string lastName)
         {
             return (lastNameregex.IsMatch(lastName));
+        }
+        public bool EmailRegex(string email)
+        {
+            return (emailregex.IsMatch(email));
         }
         static void Main(string[] args)
         {
