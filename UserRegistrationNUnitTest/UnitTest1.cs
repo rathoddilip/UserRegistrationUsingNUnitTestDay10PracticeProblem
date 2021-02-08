@@ -4,6 +4,9 @@ namespace UserRegistrationNUnitTest
 {
     public class Tests
     {
+        /// <summary>
+        /// Arrange methodology- here we can declare variables class
+        /// </summary>
         UserRegex userRegex;
         [SetUp]
         public void Setup()
