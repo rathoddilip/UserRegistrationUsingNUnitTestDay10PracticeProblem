@@ -11,6 +11,7 @@ namespace UserRegistrationUsingNUnitTest
         Regex mobileNumberregex = new Regex(@"^[0-9]{2,}\s[0-9]{10,}$");
         Regex passwordRule1regex = new Regex(@"^.{8,}$");
         Regex passwordRule2regex = new Regex(@"^(?=.*[A-Z]).{8,}$");
+        Regex passwordRule3regex = new Regex(@"^(?=.*[A-Z])(?=.*\d).{8,}$");
         public bool FirstNameRegex(string firstname)
         {
             return (firstNameregex.IsMatch(firstname)); 
@@ -35,6 +36,10 @@ namespace UserRegistrationUsingNUnitTest
         public bool PasswordRule2Regex(string passwordRule2)
         {
             return (passwordRule2regex.IsMatch(passwordRule2));
+        }
+        public bool PasswordRule3Regex(string passwordRule3)
+        {
+            return (passwordRule3regex.IsMatch(passwordRule3));
         }
         static void Main(string[] args)
         {
